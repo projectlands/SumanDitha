@@ -235,7 +235,8 @@ function bukaUndangan() {
 	const tombol = document.querySelector('.open-invite')
 	const nav = document.querySelector('.fh5co-nav')
 	tombol.classList.toggle("d-none")
-	// tombol.classList.toggle("transisi")
+	document.getElementById('myAudio').play();
+	document.getElementById('stop').style.color = "red"
 	nav.classList.toggle("d-none")
 	
  }
@@ -247,7 +248,36 @@ function bukaUndangan() {
 	minutes: 0, // Default is 0 [0-59] integer
     seconds: 0, // Default is 0 [0-59] integer
   });
-// function onLoad(){
-// 	const valuePage = document.querySelector('').value
-// 	console.log(valuePage)
-// }
+
+
+function onLoad(){
+	const cover = document.querySelector('.fh5co-cover')
+	cover.style.background = "url(images/img_bg_1.jpg"
+	var backgroundImg=["img_2.jpg","img_1.jpg","img_bg_1.jpg"],
+	base = "images/",
+	secs = 6
+	backgroundImg.forEach(function(img){
+		new Image().src = base + img; 
+		// caches images, avoiding white flash between background replacements
+	});
+
+	function backgroundSequence() {
+		window.clearTimeout();
+		var k = 0;
+		for (i = 0; i < backgroundImg.length; i++) {
+			setTimeout(function(){ 
+				cover.style.background = "url(" + base + backgroundImg[k] + ") center center ";
+				// document.documentElement.style.backgroundSize ="cover";
+			if ((k + 1) === backgroundImg.length) { setTimeout(function() { backgroundSequence() }, (secs * 1000))} else { k++; }			
+			}, (secs * 1000) * i)	
+		}
+	}
+	backgroundSequence();
+
+					
+	const urlSearchParams = new URLSearchParams(window.location.search);
+	const params = Object.fromEntries(urlSearchParams.entries());
+	const tamu = document.querySelector('.tamu')
+	tamu.innerHTML = params['hi']
+}
+

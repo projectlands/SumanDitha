@@ -14,15 +14,160 @@
 * 	Template Style 
 *
 * ======================================================= */
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  font-size: 25px;
+  line-height: 1.33;
+  border-radius: 25px;
+}
+
+.fbtn {
+  left: 10px !important;
+  background-color: transparent;
+  border: 2px solid turquoise;
+}
+.myChart {
+  width: 100%;
+}
+
+.centerm {
+  margin: 0;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.chartBox {
+  margin-top: -10px;
+  border-radius: 10px;
+  border: solid 2px rgba(54, 162, 235, 0.2);
+  background: white;
+}
+
+.cdefault {
+  margin-top: 10px;
+}
+/* spinner */
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fff;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+/* end spinner */
+
+.bubbleWrapper {
+  padding: 10px 10px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-self: flex-end;
+  color: #fff;
+}
+.inlineContainer {
+  display: inline-flex;
+}
+.inlineContainer.own {
+  flex-direction: row-reverse;
+}
+.inlineIcon {
+  width: 20px;
+  object-fit: contain;
+}
+.otherBubble {
+  min-width: 60px;
+  max-width: 700px;
+  padding: 14px 18px;
+  margin: 6px 8px;
+  background-color: #6c8ea4;
+  border-radius: 0 16px 16px 16px;
+  border: 1px solid #54788e;
+}
+.other {
+  align-self: flex-start;
+  text-align: left;
+}
+span.own,
+span.other {
+  font-size: 14px;
+  color: grey;
+}
+
 .d-none {
   display: none;
+}
+option {
+  color: #252525;
 }
 .open-invite .jumbotron {
   display: flex;
   position: fixed;
   height: 100vh;
   margin: 0;
-  z-index: 1000;
+  z-index: 99999 !important;
   width: 100%;
 }
 
@@ -66,7 +211,7 @@ body {
 }
 
 a {
-  color: #f14e95;
+  color: #0dd7e1;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -74,7 +219,7 @@ a {
 a:hover,
 a:active,
 a:focus {
-  color: #f14e95;
+  color: #0dd7e1;
   outline: none;
   text-decoration: none;
 }
@@ -329,10 +474,13 @@ figure {
 .fh5co-cover {
   height: 900px;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat center center;
   position: relative;
   width: 100%;
+  background-blend-mode: darken;
+  transition: 5s;
 }
+
 .fh5co-cover .overlay {
   z-index: 0;
   position: absolute;
@@ -825,7 +973,7 @@ figure {
   left: 0;
   top: 0.05em;
   font-family: "icomoon";
-  speak: none;
+  /* speak: none; */
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -913,7 +1061,7 @@ form label {
 .fh5co-cover .display-tc .btn {
   padding: 15px 20px;
   background: #fff !important;
-  color: #f14e95;
+  color: #0dd7e1;
   border: none !important;
   font-size: 14px;
   text-transform: uppercase;
@@ -976,7 +1124,7 @@ form label {
   display: inline-block;
   width: 100px;
   height: 100px;
-  background: rgba(241, 78, 149, 0.8);
+  background: rgba(78, 241, 241, 0.8);
   margin: 0 4px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -1100,7 +1248,8 @@ form label {
 }
 .couple-half h3 {
   font-family: "Sacramento", Arial, serif;
-  color: #f14e95;
+  color: #0dd7e1;
+  /* color: #f14e95; */
   font-size: 30px;
 }
 .couple-half .groom,
@@ -1198,7 +1347,7 @@ form label {
   height: 90px;
   font-size: 40px;
   line-height: 40px;
-  color: #f14e95;
+  color: #0dd7e1;
 }
 .feature-center p,
 .feature-center h3 {
@@ -1221,7 +1370,8 @@ form label {
   margin-bottom: 10px;
   line-height: 1.5;
   font-weight: bold;
-  color: #f14e95;
+  /* color: #f14e95; */
+  color: #0dd7e1;
   font-family: "Sacramento", Arial, serif;
 }
 @media screen and (max-width: 768px) {
@@ -1416,7 +1566,7 @@ form label {
 #fh5co-started .btn {
   height: 54px;
   border: none !important;
-  background: #f14e95;
+  background: #0dd7e1;
   color: #fff;
   font-size: 16px;
   text-transform: uppercase;
@@ -1519,7 +1669,7 @@ form label {
   position: absolute;
   right: 0px;
   font-family: "icomoon";
-  speak: none;
+  /* speak: none; */
   font-style: normal;
   font-weight: normal;
   font-variant: normal;

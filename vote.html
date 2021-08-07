@@ -1,0 +1,67 @@
+<script>
+    const spreadshetID = "1N953wTDqsIZpkrwvCsFZxcMcihv2MalB5pTn3SzonL4"
+    const url = "https://spreadsheets.google.com/feeds/list/" + spreadshetID + "/od6/public/values?alt=json"
+    const setting = {
+        "url": url,
+        "method": "GET",
+        "timeout": 0,
+        "headers": ""
+    }
+    $.ajax(setting).done(function (datas) {
+        const data = datas.feed.entry
+        const finalArray = data.map(function (obj) {return obj.gsx$kehadiran.$t})
+        const arrayCounts = (arr, val) => arr.reduce((a, v) => (v === val ? a + 1 : a), 0)
+        const tHadir = arrayCounts(finalArray, 'Tidak Hadir')
+        const ragu = arrayCounts(finalArray, 'Ragu - Ragu')
+        const hadir = arrayCounts(finalArray, 'Hadir')
+        var data_guest = ''
+        for (var i = data.length - 1; i >= 0; i--) {
+            data_guest += '<div class="inlineContainer cvote"></div><span class="other cvote" style="color: white;">' + data[i].gsx$nama.$t + ' | <strong class="cvote">' + data[i].gsx$kehadiran.$t + '</strong></span><img class="inlineIcon cvote" src="https://pngimage.net/wp-content/uploads/2018/05/cuore-emoji-png-4.png"><div class="otherBubble other cvote">' + data[i].gsx$ucapan.$t + '</div>'
+            
+        }
+        $('.bwrapper-default').append(data_guest)
+        const totalData = '<span id="cdefault" class="counter js-counter" data-from="0" data-speed="5000" data-to= "' + data.length + '" data-refresh-interval="10">' + data.length + '</span>'
+        $('.total-vote').append(totalData)
+
+
+        const datachart = {
+        labels: ['Hadir', 'Ragu', 'Tidak Hadir'],
+        datasets: [{
+          label: 'Voting',
+          data: [hadir, ragu, tHadir],
+          backgroundColor: [
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(255, 26, 104, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)',
+            'rgba(0, 0, 0, 0.2)'
+          ]
+        }]
+      };
+  
+      // config 
+      const config = {
+        type: 'bar',
+        data: datachart,
+        options: {
+          indexAxis: 'y',
+          scales: {
+            y: {
+                grid: {
+                  display: false
+                },
+              beginAtZero: true
+            }
+          }
+        }
+      };
+
+      // render init block
+      const myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+      );
+    })
+</script>
