@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -10,13 +11,13 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Wedding &mdash; Sumntra & Ditha</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet'
 		type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
 	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
-
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -51,17 +52,22 @@
 
 	<div class="fh5co-loader"></div>
 	<div class="open-invite">
-		<div class="jumbotron" style="background-image: url(images/img_1.jpg);">
+		<div class="jumbotron"
+			style="background-image: url(images/gallery/depan-mobile-min.jpg); align-content: center; background-repeat: no-repeat; background-size: cover;">
 			<div class="container">
-				<center class="centerm">
-					<h2 style="color: aliceblue; font-family: 'Work Sans', Arial, sans-serif;">Undangan Pernikahan</h2>
-					<h1 style="font-family: 'Sacramento', Arial, serif; color: rgb(103, 105, 105);">Sumantra & Ditha
+
+				<div class="blur"></div>
+				<center class="centerm" style="color: aqua; text-shadow: black 2px 2px;">
+					<h2 style="color: aliceblue; font-family: 'Montserrat'; font-weight: bold;">UNDANGAN PERNIKAHAN</h2>
+					<h1 style="font-family: 'Sacramento', Arial, serif; ">Sumantra & Ditha
 					</h1>
 					<p>Kpd. Bapak/Ibu/Saudara/i</p>
-					<h2 class="tamu" style="color: rgb(101, 103, 105); font-family: 'Work Sans', Arial, sans-serif;">
+					<h2 class="tamu" style="font-family: 'Montserrat'; color: aqua;">
 					</h2>
-					<p style="font-size: 16px;">Tanpa mengurangi rasa hormat, kami mengundang anda untuk hadir pada acara pernikahan kami.</p>
-					<button class="btn btn-success" onclick="bukaUndangan()">Buka Undangan</button>
+					<p style="font-size: 22px; color: aliceblue; ">Tanpa mengurangi rasa hormat, kami mengundang anda
+						untuk hadir pada acara pernikahan kami.</p>
+					<button class="btn btn-outline-success " style="background :rgba(49, 75, 75, 0.8);"
+						onclick="bukaUndangan()">Buka Undangan</button>
 					<!-- <a class="btn btn-info" href="#">Button 2</a> -->
 				</center>
 			</div>
@@ -73,9 +79,10 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-3">
-						<div id="fh5co-logo"><a href="#"></a>SumanDitha<strong>.</strong></a></div>
+						<div id="fh5co-logo" style="color: #0dd7e1;"><a href="#"></a>SumanDitha<strong>.</strong></a>
+						</div>
 					</div>
-					<div class="col-xs-9 text-right menu-1">
+					<div class="col-xs-9 text-right menu-1 d-none">
 						<ul>
 							<li class="active"><a href="#fh5co-couple">Mempelai</a></li>
 							<li><a href="#fh5co-event">Acara</a></li>
@@ -90,7 +97,10 @@
 		</nav>
 
 		<header id="fh5co-header" class="fh5co-cover" role="banner" data-stellar-background-ratio="0.5">
-			<div class="overlay"></div>
+
+			<div class="overlay animate-box" data-animate-effect="fadeIn"></div>
+			<!-- <div class="overlayy" style="display:none"></div> -->
+
 
 			<div class="container">
 				<div class="row">
@@ -121,24 +131,24 @@
 				<div class="couple-wrap animate-box">
 					<div class="couple-half">
 						<div class="groom">
-							<img src="images/groom.jpg" alt="groom" class="img-responsive">
+							<img src="images/individu-male.jpg" alt="groom" class="img-responsive">
 						</div>
 						<div class="desc-groom">
-							<h3>I Kadek Sumantra Yasa</h3>
-							<p >Putra kedua dari Pasangan <br>
-								I Made Widya <br> & <br>
+							<h3>I Kadek Sumantra Yasa, Amd.,SE</h3>
+							<p>Putra kedua dari Pasangan <br>
+								Jro Mk I Made Widya <br> & <br>
 								Alm. Ni Ayu Kertiasih
 							</p>
-						
+
 						</div>
 					</div>
 					<p class="heart text-center"><i class="icon-heart2"></i></p>
 					<div class="couple-half">
 						<div class="bride">
-							<img src="images/bride.jpg" alt="groom" class="img-responsive">
+							<img src="images/individu-female.jpg" alt="groom" class="img-responsive">
 						</div>
 						<div class="desc-bride">
-							<h3 style="font-size: 25px;">Luh Gde Ditha Pustika Pradnyani</h3>
+							<h3 style="font-size: 25px;">Luh Gde Ditha Pustika Pradnyani, SM</h3>
 							<p>Putri Pertama dari Pasangan <br>
 								Jro Mk Gede I Made Suastika <br> & <br>
 								Jro Mk Istri Ni Ketut Putri Adnyani
@@ -149,7 +159,7 @@
 			</div>
 		</div>
 
-		<div id="fh5co-event" class="fh5co-bg" style="background-image:url(images/img_bg_3.jpg);">
+		<div id="fh5co-event" class="fh5co-bg" style="background-image:url(images/gallery/sukaci.jpg);">
 			<div class="overlay"></div>
 			<div class="container">
 				<div class="row">
@@ -167,17 +177,25 @@
 										<h3>Acara Kami</h3>
 										<div class="event-col">
 											<i class="icon-calendar"></i>
-											<span>Sabtu 02, Oktober 2021</span>
-											<span>16.00 - Selesai</span>
+											<span>Kamis 09, September 2021</span>
+											<span>14.00 Wita - Selesai</span>
 										</div>
 										<div class="event-col">
 											<i class="icon-location2"></i>
 											<span>Jl. Raya batubulan</span>
-											<span><a href="https://goo.gl/maps/Q7ygY1nNc4RKDspd7" target="_blank">Cek Lokasi Disini</a></span>
+											<span><a href="https://goo.gl/maps/Q7ygY1nNc4RKDspd7" target="_blank">Cek
+													Lokasi Disini</a></span>
 										</div>
-										<div class="card">
-										<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.724301869781!2d115.26569331478372!3d-8.622444993803542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMzcnMjAuOCJTIDExNcKwMTYnMDQuNCJF!5e0!3m2!1sid!2sid!4v1628254390291!5m2!1sid!2sid" width="100%" height="250" style="border:0; border-radius: 20px; border: 2px solid rgba(78, 241, 241, 0.8);" allowfullscreen="" loading="lazy"></iframe>
-									</div>
+										<div class="col-sm-6">
+											<iframe
+												src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.724301869781!2d115.26569331478372!3d-8.622444993803542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOMKwMzcnMjAuOCJTIDExNcKwMTYnMDQuNCJF!5e0!3m2!1sid!2sid!4v1628254390291!5m2!1sid!2sid"
+												width="100%" height="250"
+												style="border:0; border-radius: 20px; border: 2px solid rgba(78, 241, 241, 0.8);"
+												allowfullscreen="" loading="lazy"></iframe>
+										</div>
+										<div class="col-sm-6">
+											<img src="images/qr-code.jpg" width="50%" alt="" style="margin-top: 20px;">
+										</div>
 									</div>
 								</div>
 							</div>
@@ -191,138 +209,141 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-						<span>We Love Each Other</span>
 						<h2>Our Story</h2>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-							there live the blind texts.</p>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12 col-md-offset-0">
-						<ul class="timeline animate-box">
-							<li class="animate-box">
-								<div class="timeline-badge" style="background-image:url(images/couple-1.jpg);"></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">First We Meet</h3>
-										<span class="date">December 25, 2015</span>
+					<div class="row">
+						<div class="col-md-12 col-md-offset-0">
+							<ul class="timeline animate-box">
+								<li class="animate-box">
+									<div class="timeline-badge" style="background-image:url(images/first-meet.jpg);">
 									</div>
-									<div class="timeline-body">
-										<p>Far far away, behind the word mountains, far from the countries Vokalia and
-											Consonantia, there live the blind texts. Separated they live in
-											Bookmarksgrove right at the coast of the Semantics, a large language ocean.
-										</p>
+									<div class="timeline-panel">
+										<div class="timeline-heading">
+											<h3 class="timeline-title">First We Meet</h3>
+											<!-- <span class="date">December 25, 2015</span> -->
+										</div>
+										<div class="timeline-body">
+											<p>Pada tahun 2014 adalah tahun pertama kita bertemu, singkat cerita
+												suman :"aku melihat sosok wanita yang sedang menari dengan ayunan
+												gerakan
+												yang sangat lemah gemulai
+												membuatku jatuh hati padanya",,
+											</p>
+											<p>
+												ditha: "setelah beberapa hari pertemuan kita, aku melihat salah satu
+												kakak
+												senior yang selalu memetik
+												gitar dengan alunan lagu yang membuat aku jadi tersetuh dan terpesona
+												padanya.
+												Namun cerita kita tidaklah semulus seperti jalan kisah cinta orang lain
+												di
+												luar sana tapi kita hadapi
+												dengan penuh senyuman dan harapan yang indah 🤣🥰
+											</p>
+										</div>
 									</div>
-								</div>
-							</li>
-							<li class="timeline-inverted animate-box">
-								<div class="timeline-badge" style="background-image:url(images/couple-2.jpg);"></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">First Date</h3>
-										<span class="date">December 28, 2015</span>
+								</li>
+								<li class="timeline-inverted animate-box">
+									<div class="timeline-badge" style="background-image:url(images/second-step.jpg);">
 									</div>
-									<div class="timeline-body">
-										<p>Far far away, behind the word mountains, far from the countries Vokalia and
-											Consonantia, there live the blind texts. Separated they live in
-											Bookmarksgrove right at the coast of the Semantics, a large language ocean.
-										</p>
+									<div class="timeline-panel">
+										<div class="timeline-heading">
+											<h3 class="timeline-title">In A Relationship</h3>
+											<!-- <span class="date">December 28, 2015</span> -->
+										</div>
+										<div class="timeline-body">
+											<p>
+												Tidak terasa ternyata sudah masuk di tahun ke-3 setelah kita bertemu,
+												banyak
+												hal yang kita lalui dan belajar
+												memahami satu sama lain, namun jalan cerita kisah cinta kita tidaklah
+												seharmonis foto kenangan kita berdua
+												ini terlalu banyak kerikil-kerikil yang mengajarkan kita bahwa
+												sesungguhnya
+												cinta kasih tidaklah semulus
+												jalan menuju roma, naik turun bagaikan seorang pendaki sudah kita lalui
+												bahkan hubungan kita hampir tengelam
+												layakanya nanggala yang hanya menyisakan kenangan manis dan penuh
+												perjuangan,
+												tetapi kita berdua selalu
+												berusaha untuk menerima segala kekurangan satu sama lain dan kembali
+												lagi
+												pada komitmen awal kita untuk
+												selalu menghadapi dengan penuh senyuman 🤗 dari perjalan kisah kita
+												mengajarkan juga bagaimana kita menerima
+												kekurangan dan kelebihan satu sama lain, karena sesungguhnya tidak ada
+												perlajan cinta yang sempurna namun
+												bagaimana kita bisa mengontrol emosi satu sama lain untuk hubungan yang
+												indah pada akhirnya 😍
+											</p>
+										</div>
 									</div>
-								</div>
-							</li>
-							<li class="animate-box">
-								<div class="timeline-badge" style="background-image:url(images/couple-3.jpg);"></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">In A Relationship</h3>
-										<span class="date">January 1, 2016</span>
+								</li>
+								<li class="animate-box">
+									<div class="timeline-badge"
+										style="background-image:url(images/gallery/maried-min.jpg);"></div>
+									<div class="timeline-panel">
+										<div class="timeline-heading">
+											<h3 class="timeline-title">Our Wedding</h3>
+											<span class="date">09 September 2021</span>
+										</div>
+										<div class="timeline-body">
+											<p>
+												Dan akhirnya di tahun ke-7 komitmen kita berunjung dalam momen
+												kesakralan
+												pertalian hati hubungan kita berdua
+												dan semoga ini menjadi kekuatan kita dalam menjalankan bahtera rumah
+												tangga
+												yang harmonis, damai dan dihujani
+												cinta kasih🤍
+											</p>
+										</div>
 									</div>
-									<div class="timeline-body">
-										<p>Far far away, behind the word mountains, far from the countries Vokalia and
-											Consonantia, there live the blind texts. Separated they live in
-											Bookmarksgrove right at the coast of the Semantics, a large language ocean.
-										</p>
-									</div>
-								</div>
-							</li>
-						</ul>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 
-		<div id="fh5co-gallery" class="fh5co-section-gray">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-						<span>Our Memories</span>
-						<h2>Wedding Gallery</h2>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-							there live the blind texts.</p>
+			<div id="fh5co-gallery" class="fh5co-section-gray">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+							<!-- <span>Our Memories</span> -->
+							<h2>Wedding Gallery</h2>
+						</div>
 					</div>
-				</div>
-				<div class="row row-bottom-padded-md mygalerry">
-					<div class="col-md-12">
-						
-						<ul id="fh5co-gallery-list">
-							<li class="one-third animate-box" data-animate-effect="fadeIn"
-								style="background-image: url(images/gallery-1.jpg); " 
-								data-responsive="images/gallery-1.jpg" 
-								data-src="images/gallery-1.jpg" data-sub-html="">
-									<a href="images/gallery-1.jpg">
-										<div class="case-studies-summary">
-											<span>14 Photos</span>
-											<h2>Two Glas of Juice</h2>
-										</div>
-									</a>
-							</li>
 
-							<li class="one-third animate-box" data-animate-effect="fadeIn"
-								style="background-image: url(images/gallery-2.jpg); " 
-								data-responsive="images/gallery-2.jpg" 
-								data-src="images/gallery-2.jpg" data-sub-html="">
-									<a href="images/gallery-2.jpg">
-										<div class="case-studies-summary">
-											<span>14 Photos</span>
-											<h2>Two Glas of Juice</h2>
-										</div>
-									</a>
-							</li>
+					<div class="row row-bottom-padded-md">
+						<div class="col-md-12">
+							<ul id="fh5co-gallery-list">
 
-							<li class="one-third animate-box" data-animate-effect="fadeIn"
-								style="background-image: url(images/gallery-3.jpg); " 
-								data-responsive="images/gallery-3.jpg" 
-								data-src="images/gallery-3.jpg" data-sub-html="">
-									<a href="images/gallery-3.jpg">
-										<div class="case-studies-summary">
-											<span>14 Photos</span>
-											<h2>Two Glas of Juice</h2>
-										</div>
-									</a>
-							</li>
-
-						</ul>
+							</ul>
+						</div>
 					</div>
+
+
 				</div>
 			</div>
-		</div>
 
-		<div id="fh5co-counter" class="fh5co-bg fh5co-counter" style="background-image:url(images/img_1.jpg);">
-			<div class="overlay"></div>
-			<div class="container">
-				<div class="row">
-					<div class="display-t">
-						<div class="display-tc">
-							<div class="col-md-8 col-sm-8 animate-box">
-								<div class="feature-center">
-								<!-- <div class="chart"> -->
-									<div id="boxChart" class="chartBox">
-										<canvas id="myChart"></canvas>
-									  </div>
-								<!-- </div> -->
+			<div id="fh5co-counter" class="fh5co-bg fh5co-counter"
+				style="background-image:url(images/gallery/votebg-min.jpg);">
+				<div class="overlay"></div>
+				<div class="container">
+					<div class="row">
+						<div class="display-t">
+							<div class="display-tc">
+								<div class="col-md-8 col-sm-8 animate-box">
+									<div class="feature-center">
+										<!-- <div class="chart"> -->
+										<div id="boxChart" class="chartBox">
+											<canvas id="myChart"></canvas>
+										</div>
+										<!-- </div> -->
+									</div>
 								</div>
-							</div>
-							<!-- <div class="col-md-4 col-sm-8 animate-box"> -->
+								<!-- <div class="col-md-4 col-sm-8 animate-box"> -->
 								<!-- <div class="feature-center">
 								<span class="icon">
 									<i class="icon-clock"></i>
@@ -332,199 +353,246 @@
 								<span class="counter-label">Hours Spent</span>
 
 							</div> -->
-							<!-- </div> -->
-							<div class="col-md-4 col-sm-8 animate-box">
-								<div class="feature-center">
-									<span class="icon">
-										<i class="icon-users"></i>
-									</span>
-									<div class="total-vote">
+								<!-- </div> -->
+								<div class="col-md-4 col-sm-8 animate-box">
+									<div class="feature-center">
+										<span class="icon">
+											<i class="icon-users"></i>
+										</span>
+										<div class="total-vote">
 
+										</div>
+										<span class="counter-label">Total Vote</span>
 									</div>
-									<span class="counter-label">Total Vote</span>
 								</div>
+
 							</div>
-							
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 
-		<div id="fh5co-testimonial">
-			<div class="container">
-				<div class="row">
+			<div id="fh5co-testimonial">
+				<div class="container">
+					<div class="row">
+						<div class="row animate-box">
+							<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+								<h2>Protokol Kesehatan</h2>
+								<p>Jangan ragu untuk datang, kami sudah berkoordinasi dengan semua pihak yang terkait
+									pencegahan penularan COVID-19. acara kami akan mengikuti segala prosedur protokol
+									kesehatan untuk mencegah penularan COVID-19.</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12 animate-box">
+								<div class="wrap-testimony">
+									<div class="col-md-4 col-sm-8">
+										<div class="item">
+											<div class="testimony-slide active text-center">
+												<figure>
+													<img src="images/handshop.png" alt="user">
+												</figure>
+												<span>Cuci tangan sabun</span>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4 col-sm-8">
+										<div class="item">
+											<div class="testimony-slide active text-center">
+												<figure>
+													<img src="images/jaga jarak.png" alt="user">
+												</figure>
+												<span>Jaga jarak</span>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4 col-sm-8">
+										<div class="item">
+											<div class="testimony-slide active text-center">
+												<figure>
+													<img src="images/hindari berjabat tangan.png" alt="user">
+												</figure>
+												<span>Hidari berjabat tangan</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12 animate-box">
+								<div class="wrap-testimony">
+									<div class="col-md-4 col-sm-8">
+										<div class="item">
+											<div class="testimony-slide active text-center">
+												<figure>
+													<img src="images/menggunakan masker.png" alt="user">
+												</figure>
+												<span>Menggunakan masker</span>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4 col-sm-8">
+										<div class="item">
+											<div class="testimony-slide active text-center">
+												<figure>
+													<img src="images/kerumunan.png" alt="user">
+												</figure>
+												<span>Hindari kerumunan</span>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-4 col-sm-8">
+										<div class="item">
+											<div class="testimony-slide active text-center">
+												<figure>
+													<img src="images/handsenitaizer.png" alt="user">
+												</figure>
+												<span>Gunakan handsenitaizer</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div id="fh5co-started" class="fh5co-bg" style="background-image:url(images/gallery/vote2bg-min.jpg);">
+				<div class="overlay"></div>
+				<div class="container">
 					<div class="row animate-box">
 						<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-							<h2>Protokol Kesehatan</h2>
-							<p>Jangan ragu untuk datang, kami sudah berkoordinasi dengan semua pihak yang terkait pencegahan penularan COVID-19. acara kami akan mengikuti segala prosedur protokol kesehatan untuk mencegah penularan COVID-19.</p>
+							<h2>Voting Beserta Ucapan Anda</h2>
+							<p>Pengisian voting, ucapan dan doa restu Bapak / Ibu / Saudara / i merupakan suatu
+								kehormatan
+								bagi kami, terimakasih. <br>
+								<a href="#fh5co-counter" style="color: #0dd7e1;">Lihat Total Voting</a>
+							</p>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-md-12 animate-box">
-							<div class="wrap-testimony">
-								<div class="col-md-4 col-sm-8">
-									<div class="item">
-										<div class="testimony-slide active text-center">
-											<figure>
-												<img src="images/handshop.png" alt="user">
-											</figure>
-											<span>Cuci tangan sabun</span>
+					<div class="row animate-box">
+						<div class="col-md-10 col-md-offset-1">
+							<form class="form-inline" name="submit-to-google-sheet">
+								<div class="col-md-6 col-sm-6">
+									<div class="form-group">
+										<label for="name" class="sr-only">Isikan Nama</label>
+										<input type="name" class="form-control" id="name" name="Nama"
+											placeholder="Isikan Nama" required>
+									</div>
+									<div class="form-group">
+										<label for="ucapan" class="sr-only"></label>
+										<textarea id="ucapan" name="Ucapan" class="form-control" cols="10" rows="5"
+											placeholder="Ucapan dan Doa..." required></textarea>
+									</div>
+									<div class="form-group">
+										<label for="kehadiran" class="sr-only"></label>
+										<select class="form-control" name="Kehadiran" id="kehadiran" required>
+											<option value="Hadir">Hadir</option>
+											<option value="Ragu - Ragu">Ragu - Ragu</option>
+											<option value="Tidak Hadir">Tidak Hadir</option>
+										</select>
+									</div>
+									<!-- <div class="col-md-4 col-sm-4"> -->
+									<button type="submit" class="btn-kirim btn btn-default btn-block">Kirim
+									</button>
+									<button class="btn-loading btn btn-default btn-block disabled d-none">
+										<div class="lds-ellipsis" style="margin-top: -20px;">
+											<div></div>
+											<div></div>
+											<div></div>
+											<div></div>
 										</div>
+									</button>
+									<!-- </div> -->
+									<div class="my-alert alert alert-success d-none alert-dismissable">
+										<span class="close" data-dismiss="alert">&times;</span>
+										<strong>Ucapan & Doa</strong> Sudah Terikirm, Terimakasih
 									</div>
 								</div>
-								<div class="col-md-4 col-sm-8">
-									<div class="item">
-										<div class="testimony-slide active text-center">
-											<figure>
-												<img src="images/jaga jarak.png" alt="user">
-											</figure>
-											<span>Jaga jarak</span>
-										</div>
+
+								<div class="col-md-6 col-sm-6">
+									<div class="col-md-12 col-sm-12 text-center"
+										style="border: 1px solid rgb(143, 140, 140);border-radius: 5px; overflow-y: scroll; height: 320px;">
+
+										<div class="bwrapper-default bubbleWrapper"></div>
+
 									</div>
 								</div>
-								<div class="col-md-4 col-sm-8">
-									<div class="item">
-										<div class="testimony-slide active text-center">
-											<figure>
-												<img src="images/hindari berjabat tangan.png" alt="user">
-											</figure>
-											<span>Hidari berjabat tangan</span>
-										</div>
-									</div>
-								</div>
-							</div>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-md-12 animate-box">
-							<div class="wrap-testimony">
-								<div class="col-md-4 col-sm-8">
-									<div class="item">
-										<div class="testimony-slide active text-center">
-											<figure>
-												<img src="images/menggunakan masker.png" alt="user">
-											</figure>
-											<span>Menggunakan masker</span>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-4 col-sm-8">
-									<div class="item">
-										<div class="testimony-slide active text-center">
-											<figure>
-												<img src="images/kerumunan.png" alt="user">
-											</figure>
-											<span>Hindari kerumunan</span>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-4 col-sm-8">
-									<div class="item">
-										<div class="testimony-slide active text-center">
-											<figure>
-												<img src="images/handsenitaizer.png" alt="user">
-											</figure>
-											<span>Gunakan handsenitaizer</span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+					</form>
 				</div>
 			</div>
+
 		</div>
-
-
-		<div id="fh5co-started" class="fh5co-bg" style="background-image:url(images/img_bg_4.jpg);">
-			<div class="overlay"></div>
-			<div class="container">
-				<div class="row animate-box">
-					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-						<h2>Voting Beserta Ucapan Anda</h2>
-						<p>Pengisian voting, ucapan dan doa restu Bapak / Ibu / Saudara / i merupakan suatu kehormatan bagi kami, terimakasih. <br>
-							<a href="#fh5co-counter" style="color: #0dd7e1;">Lihat Total Voting</a>
-						</p>
-					</div>
-				</div>
-				<div class="row animate-box">
-					<div class="col-md-10 col-md-offset-1">
-						<form class="form-inline" name="submit-to-google-sheet">
-							<div class="col-md-6 col-sm-6">
-								<div class="form-group">
-									<label for="name" class="sr-only">Isikan Nama</label>
-									<input type="name" class="form-control" id="name" name="Nama"
-										placeholder="Isikan Nama" required>
-								</div>
-								<div class="form-group">
-									<label for="ucapan" class="sr-only"></label>
-									<textarea id="ucapan" name="Ucapan" class="form-control" cols="10" rows="5"
-										placeholder="Ucapan dan Doa..." required></textarea>
-								</div>
-								<div class="form-group">
-									<label for="kehadiran" class="sr-only"></label>
-									<select class="form-control" name="Kehadiran" id="kehadiran" required>
-										<option value="Hadir">Hadir</option>
-										<option value="Ragu - Ragu">Ragu - Ragu</option>
-										<option value="Tidak Hadir">Tidak Hadir</option>
-									</select>
-								</div>
-								<!-- <div class="col-md-4 col-sm-4"> -->
-								<button type="submit" class="btn-kirim btn btn-default btn-block">Kirim
-								</button>
-								<button class="btn-loading btn btn-default btn-block disabled d-none">
-									<div class="lds-ellipsis" style="margin-top: -20px;">
-										<div></div>
-										<div></div>
-										<div></div>
-										<div></div>
-									</div>
-								</button>
-								<!-- </div> -->
-								<div class="my-alert alert alert-success d-none alert-dismissable">
-									<span class="close" data-dismiss="alert">&times;</span>
-									<strong>Ucapan & Doa</strong> Sudah Terikirm, Terimakasih
-								</div>
-							</div>
-
-							<div class="col-md-6 col-sm-6">
-								<div class="col-md-12 col-sm-12 text-center"
-									style="border: 1px solid rgb(143, 140, 140);border-radius: 5px; overflow-y: scroll; height: 320px;">
-
-									<div class="bwrapper-default bubbleWrapper"></div>
-
-								</div>
-							</div>
-					</div>
-				</div>
-				</form>
-			</div>
-		</div>
-
-	</div>
 	</div>
 
 	<footer id="fh5co-footer" role="contentinfo" style="height: 20%;">
 		<!-- <div class="container"> -->
-			<audio id="myAudio" loop>
-				<source src="audio/wedding.mp3" type="audio/mpeg">
-			  </audio>
-				<!-- <p>copyright</p> -->
-			</div>
+		<audio id="myAudio" loop>
+			<source src="audio/wedding.mp3" type="audio/mpeg">
+		</audio>
+		<!-- <p>copyright</p> -->
+		</div>
 
 		<!-- </div> -->
 	</footer>
-	<button onclick="playAudio()" class="fbtn gototop active btn-circle btn-lg" type="button" style="display:none" id="play">
+	<div id="circularMenu1" class="circular-menu circular-menu-left">
+
+		<a class="floating-btn" onclick="document.getElementById('circularMenu1').classList.toggle('active');">
+			<span class="icon">
+				<i class="icon-menu"></i>
+			</span>
+		</a>
+
+		<menu class="items-wrapper">
+			<a href="#fh5co-couple" class="menu-item" style="color: red;">
+				<span class="icon">
+					<i class="icon-heart2"></i>
+				</span>
+			</a>
+			<a href="#fh5co-gallery" class="menu-item">
+				<span class="icon">
+					<i class="icon-image2"></i>
+				</span>
+			</a>
+			<a href="#fh5co-testimonial" class="menu-item">
+				<span class="icon">
+					<i class="icon-shield"></i>
+				</span>
+			</a>
+			<a class="menu-item">
+				<button onclick="playAudio()" class="fbtn btn-circle btn-lg" type="button" style="display:none"
+					id="play">
+					<span class="icon">
+						<i class="icon-controller-play"></i>
+					</span>
+				</button>
+				<button onclick="pauseAudio()" class="fbtn fbtn btn-circle btn-lg" type="button" id="stop"><span
+						class="icon">
+						<span class="icon">
+							<i class="icon-controller-stop"></i>
+						</span>
+				</button>
+			</a>
+
+		</menu>
+
+	</div>
+	<!-- <button onclick="playAudio()" class="fbtn gototop active btn-circle btn-lg" type="button" style="display:none" id="play">
 		<span class="icon">
 			<i class="icon-controller-play"></i>
 		</span>
-	</button>
-	  <button onclick="pauseAudio()" class="fbtn gototop active fbtn btn-circle btn-lg" type="button" id="stop"><span class="icon">
+	</button> -->
+
+	<!-- <button onclick="pauseAudio()" class="fbtn gototop active fbtn btn-circle btn-lg" type="button" id="stop"><span class="icon">
 		<span class="icon">
 			<i class="icon-controller-stop"></i>
 		</span>
-	  </button> 
+	  </button>  -->
 	</div>
 
 	<div class="gototop js-top">
@@ -568,22 +636,22 @@
 	<script src="js/script.js"></script>
 
 	<script>
-    // var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
+		// var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
 
-    // // default example
-    // simplyCountdown('.simply-countdown-one', {
-    //     year: d.getFullYear(),
-    //     month: d.getMonth() + 1,
-    //     day: d.getDate()
-    // });
+		// // default example
+		// simplyCountdown('.simply-countdown-one', {
+		//     year: d.getFullYear(),
+		//     month: d.getMonth() + 1,
+		//     day: d.getDate()
+		// });
 
-    //jQuery example
-    // $('#simply-countdown-losange').simplyCountdown({
-    //     year: d.getFullYear(),
-    //     month: d.getMonth() + 1,
-    //     day: d.getDate(),
-    //     enableUtc: false
-    // });
+		//jQuery example
+		// $('#simply-countdown-losange').simplyCountdown({
+		//     year: d.getFullYear(),
+		//     month: d.getMonth() + 1,
+		//     day: d.getDate(),
+		//     enableUtc: false
+		// });
 	</script>
 
 </body>

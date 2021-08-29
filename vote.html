@@ -1,6 +1,6 @@
 <script>
-    const spreadshetID = "1N953wTDqsIZpkrwvCsFZxcMcihv2MalB5pTn3SzonL4"
-    const url = "https://spreadsheets.google.com/feeds/list/" + spreadshetID + "/od6/public/values?alt=json"
+    // const spreadshetID = "1N953wTDqsIZpkrwvCsFZxcMcihv2MalB5pTn3SzonL4"
+    const url = "https://script.google.com/macros/s/AKfycbxZLKkOAio18qbU9V9-Du3AT5ELmfv0xBjsFCUjDMfTULOjhoo0MUM28FMTtwrLeMSy/exec"
     const setting = {
         "url": url,
         "method": "GET",
@@ -8,19 +8,26 @@
         "headers": ""
     }
     $.ajax(setting).done(function (datas) {
-        const data = datas.feed.entry
-        const finalArray = data.map(function (obj) {return obj.gsx$kehadiran.$t})
+        const data = datas.GoogleSheetData
+        // const finalArray = data.map(function (obj) {return obj.gsx$kehadiran.$t})
+        function arrayColumn(array, columnName) {
+          return array.map(function(value,index) {
+              return value[columnName];
+          })
+        }
+        const finalArray = arrayColumn(data, 3)
         const arrayCounts = (arr, val) => arr.reduce((a, v) => (v === val ? a + 1 : a), 0)
         const tHadir = arrayCounts(finalArray, 'Tidak Hadir')
         const ragu = arrayCounts(finalArray, 'Ragu - Ragu')
         const hadir = arrayCounts(finalArray, 'Hadir')
         var data_guest = ''
-        for (var i = data.length - 1; i >= 0; i--) {
-            data_guest += '<div class="inlineContainer cvote"></div><span class="other cvote" style="color: white;">' + data[i].gsx$nama.$t + ' | <strong class="cvote">' + data[i].gsx$kehadiran.$t + '</strong></span><img class="inlineIcon cvote" src="https://pngimage.net/wp-content/uploads/2018/05/cuore-emoji-png-4.png"><div class="otherBubble other cvote">' + data[i].gsx$ucapan.$t + '</div>'
-            
+        const totalKonfirm = data.length - 1
+        for (var i = data.length - 1; i >= 1; i--) {
+            data_guest += '<div class="inlineContainer cvote"></div><span class="other cvote" style="color: white;">' + data[i][1] + ' | <strong>' + data[i][3] + '</strong></span><img class="inlineIcon cvote" src="https://pngimage.net/wp-content/uploads/2018/05/cuore-emoji-png-4.png"><div class="otherBubble other cvote">' + data[i][2] + '</div>'
+            // console.log(data[i][2])
         }
         $('.bwrapper-default').append(data_guest)
-        const totalData = '<span id="cdefault" class="counter js-counter" data-from="0" data-speed="5000" data-to= "' + data.length + '" data-refresh-interval="10">' + data.length + '</span>'
+        const totalData = '<span id="cdefault" class="counter js-counter" data-from="0" data-speed="5000" data-to= "' + totalKonfirm + '" data-refresh-interval="10">' + totalKonfirm + '</span>'
         $('.total-vote').append(totalData)
 
 
