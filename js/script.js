@@ -141,6 +141,6 @@ gallery.forEach(arrayGallery);
 document.getElementById("fh5co-gallery-list").innerHTML = text;
 
 function arrayGallery(item) {
-  text += '<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery/' + item + '); " data-responsive="images/gallery/' + item + '" data-src="images/gallery/' + item + '" data-sub-html=""> <a href="images/gallery/' + item + '"></a></li>';
+  text += '<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery/' + item + '); background-repeat:no-repeat; " data-responsive="images/gallery/' + item + '" data-src="images/gallery/' + item + '" data-sub-html=""> <a href="images/gallery/' + item + '"></a></li>';
 }
 lightGallery(document.getElementById('fh5co-gallery-list'))
