@@ -359,18 +359,20 @@ option {
 @media only screen and (max-width: 599px) {
   .jumbotron {
     background-size: cover;
-    /* background-position-x: 100px; */
   }
-
-  /* @media only screen and (min-width: 599px) {
-    .jumbotron {
-      background-size: cover;
-      background-position-x: -100px;
-    } */
 
   .fh5co-cover {
     background-position-x: -250px !important;
   }
+
+  .klik-undangan .txt {
+    font-size: 12px !important;
+  }
+
+  .klik-undangan {
+    margin-bottom: -50%;
+  }
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -381,6 +383,14 @@ option {
 
   .toggle {
     display: none;
+  }
+
+  .klik-undangan {
+    margin-bottom: 20%;
+  }
+
+  .center1 {
+    margin-bottom: -20%;
   }
 }
 
